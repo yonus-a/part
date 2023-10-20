@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import "../styles/global.css";
+import SvgSprite from "./components/svg-sprite";
+import Header from "./components/header/page";
+import "@styles/global.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +15,11 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="fa" dir="rtl" prefix="og: https://ogp.me/ns#">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <SvgSprite />
+      </body>
     </html>
   );
 }

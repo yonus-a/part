@@ -1,0 +1,51 @@
+@use "@styles/mixins.scss" as *;
+
+.hero {
+  @include size(100%, 100vh);
+  @include flex-center;
+  color: var(--clr-white);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 4em 0;
+  position: relative;
+
+  .center {
+    text-align: center;
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.6em;
+    }
+
+    p {
+      font-size: 1.3em;
+    }
+
+    @include on-pc {
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    animation: puls 1s ease-in-out infinite alternate;
+    bottom: 10%;
+  }
+}
+
+@keyframes puls {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
