@@ -1,3 +1,4 @@
+import Achievements from "./components/achievements";
 import BusinessDesc from "./components/business-desc";
 import Hero from "./components/hero";
 import License from "./components/license";
@@ -10,6 +11,7 @@ export default function Home() {
       <License />
       <BusinessDesc />
       <Services />
+      <Achievements />
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium
       consectetur ducimus natus temporibus reprehenderit nostrum ab maiores cum
       est sed debitis quis tempore repudiandae quia repellat recusandae quae
