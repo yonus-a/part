@@ -1,6 +1,7 @@
 import BusinessDesc from "./components/business-desc";
 import Hero from "./components/hero";
 import License from "./components/license";
+import Services from "./components/services";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <License />
       <BusinessDesc />
+      <Services />
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium
       consectetur ducimus natus temporibus reprehenderit nostrum ab maiores cum
       est sed debitis quis tempore repudiandae quia repellat recusandae quae
