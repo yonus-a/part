@@ -43,6 +43,11 @@
   justify-content: space-between;
 }
 
+@mixin flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
 @mixin flex-gap($gap) {
   display: flex;
   gap: $gap;

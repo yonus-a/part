@@ -1,0 +1,41 @@
+@use "@styles/mixins.scss" as *;
+
+.license {
+  padding: 4em 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.9em;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3em;
+    padding: 0 2em;
+
+    .card {
+      display: grid;
+      justify-items: center;
+      font-size: 15px;
+      gap: 1em;
+
+      img {
+        @include size(70px);
+      }
+
+      @include on-pc {
+        font-size: 16px;
+
+        img {
+          @include size(80px);
+        }
+      }
+    }
+
+    @include on-pc {
+      @include flex-space-around;
+      row-gap: 0;
+    }
+  }
+}
