@@ -1,0 +1,27 @@
+@use "@styles/mixins.scss" as *;
+
+.products {
+  .flex-wrapper {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    .card {
+      width: 310px;
+      background-color: #eee;
+      padding: 2em;
+      @include grid-gap(1.3em);
+      justify-items: center;
+      border-radius: 1em;
+      box-shadow: 2px 6px 10px 0 rgba($color: #000000, $alpha: 0.2);
+
+      h3 {
+        text-align: center;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}
