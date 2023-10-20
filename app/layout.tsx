@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 // Import Swiper styles
 import "swiper/css";
+import Footer from "./components/footer";
 
 interface Props {
   children: React.ReactNode;
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: Props) {
       <body>
         <Header />
         {children}
+        <Footer />
         <SvgSprite />
       </body>
     </html>

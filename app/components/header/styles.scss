@@ -1,0 +1,30 @@
+@use "@styles/mixins.scss" as *;
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 99999999999;
+  top: 0;
+
+  .wrapper {
+    @include flex-space-between;
+    padding: 2.7em 0;
+  }
+}
+
+.white-bg {
+  background-color: white;
+  box-shadow: 0 5px 10px 0 rgba($color: #000000, $alpha: 0.3);
+
+  a {
+    color: black;
+
+    svg {
+      fill: black;
+    }
+  }
+
+  .wrapper {
+    padding: 1.5em 0;
+  }
+}
