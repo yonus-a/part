@@ -1,0 +1,48 @@
+@use "@styles/mixins.scss" as *;
+
+.business-desc {
+  background-color: #eee;
+  margin-top: 1.7em;
+  padding: 2em 0;
+
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    img {
+      @include size(100%, 300px);
+      border-radius: 1em;
+    }
+
+    .group {
+      p {
+        text-align: justify;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 1.5em;
+        background-color: #ddd;
+        padding: 0.8em;
+        font-size: 15px;
+        border-radius: 1em;
+
+        svg {
+          @include size(30px, 20px);
+          fill: #555;
+        }
+      }
+    }
+
+    @include on-pc {
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        @include size(530px, 380px);
+      }
+    }
+  }
+}

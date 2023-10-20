@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./styles.scss";
+import Container from "../container";
 
 const data = [
   {
@@ -27,20 +28,22 @@ const data = [
 export default function License() {
   return (
     <section className="license" aria-label="license">
-      <h2>مجوز ها</h2>
-      <ul>
-        {data.map(({ id, image, text }: any) => (
-          <li className="card" key={id}>
-            <Image
-              src={`/images/license/${image}`}
-              width={80}
-              height={80}
-              alt=""
-            />
-            {text}
-          </li>
-        ))}
-      </ul>
+      <Container>
+        <h2>مجوز ها</h2>
+        <ul>
+          {data.map(({ id, image, text }: any) => (
+            <li className="card" key={id}>
+              <Image
+                src={`/images/license/${image}`}
+                width={80}
+                height={80}
+                alt=""
+              />
+              {text}
+            </li>
+          ))}
+        </ul>
+      </Container>
     </section>
   );
 }
