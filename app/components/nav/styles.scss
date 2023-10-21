@@ -18,6 +18,20 @@
   .mobile-only {
     .menu-cta {
       @include icon-size(32px);
+      fill: var(--clr-white);
+    }
+
+    .close-menu {
+      @include icon-size(35px);
+      margin-bottom: 1.5em;
+    }
+
+    a {
+      color: black;
+
+      svg {
+        fill: black;
+      }
     }
 
     .menu-wrapper {
@@ -27,11 +41,34 @@
       top: 0;
       background-color: #eee;
       padding: 2em;
-    }
+      height: 100vh;
 
-    .general-link {
-      svg {
+      .menu {
         display: none;
+      }
+
+      .show-menu {
+        display: block !important;
+        background-color: #ddd;
+        border-radius: 1em;
+
+        li:first-child {
+          a {
+            border-top-right-radius: 1em;
+            border-top-left-radius: 1em;
+          }
+        }
+
+        li:last-child {
+          a {
+            border-bottom-right-radius: 1em;
+            border-bottom-left-radius: 1em;
+          }
+        }
+
+        a:hover {
+          background-color: #ccc;
+        }
       }
     }
   }

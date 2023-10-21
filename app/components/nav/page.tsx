@@ -11,6 +11,13 @@ import "./styles.scss";
 export default function Nav() {
   const [show, setShow] = useState(false);
 
+  const handleClick = (event: any) => {
+    event.preventDefault();
+    const { target } = event;
+    const menu = target.nextElementSibling;
+    menu.classList.toggle("show-menu");
+  };
+
   return (
     <nav aria-label="Main Navigation" className="main-nav">
       <MobileOnly>
@@ -19,10 +26,10 @@ export default function Nav() {
         </Button>
         {show && (
           <div className="menu-wrapper">
-            <Button onClick={() => setShow(false)}>
+            <Button className="close-menu" onClick={() => setShow(false)}>
               <Icon name="close" />
             </Button>
-            <NavLinks />
+            <NavLinks onGeneralLinkClick={handleClick} />
           </div>
         )}
       </MobileOnly>

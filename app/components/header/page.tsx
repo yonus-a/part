@@ -6,11 +6,12 @@ import Image from "next/image";
 import Nav from "../nav/page";
 import "./styles.scss";
 import { useState, useEffect } from "react";
+import Icon from "../icon";
 
 export default function Header() {
   const [classnames, setClassnames] = useState("");
 
-  const listenScrollEvent = (event) => {
+  const listenScrollEvent = (event: any) => {
     if (window.scrollY < 73) {
       return setClassnames("");
     } else if (window.scrollY > 70) {
@@ -29,8 +30,9 @@ export default function Header() {
       <Container>
         <div className="wrapper">
           <Nav />
-          <Button>
-            <Image src="/icons/en.png" alt="language" width={40} height={40} />
+          <Button className="language">
+            <Icon name="language" title="language" />
+            {/* <Image src="/icons/en.png" alt="language" width={40} height={40} /> */}
           </Button>
         </div>
       </Container>

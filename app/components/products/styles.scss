@@ -1,6 +1,8 @@
 @use "@styles/mixins.scss" as *;
 
 .products {
+  margin-top: 1.7em;
+
   .flex-wrapper {
     @include flex-center;
     flex-wrap: wrap;

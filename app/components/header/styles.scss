@@ -9,6 +9,13 @@ header {
   .wrapper {
     @include flex-space-between;
     padding: 2.7em 0;
+
+    .language {
+      svg {
+        @include size(40px);
+        fill: white;
+      }
+    }
   }
 }
 
@@ -16,15 +23,19 @@ header {
   background-color: white;
   box-shadow: 0 5px 10px 0 rgba($color: #000000, $alpha: 0.3);
 
-  a {
-    color: black;
-
+  .menu-cta {
     svg {
-      fill: black;
+      fill: #555;
     }
   }
 
   .wrapper {
     padding: 1.5em 0;
+
+    .language {
+      svg {
+        fill: #555;
+      }
+    }
   }
 }

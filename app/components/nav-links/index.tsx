@@ -113,7 +113,11 @@ const links = [
   },
 ];
 
-export default function NavLinks() {
+interface Props {
+  onGeneralLinkClick?: any;
+}
+
+export default function NavLinks({ onGeneralLinkClick }: Props) {
   const pathname = usePathname();
 
   return (
@@ -126,13 +130,14 @@ export default function NavLinks() {
             <a
               href={href}
               role="menuitem"
+              onClick={onGeneralLinkClick}
               className={`${activeClass} general-link`}
             >
               {name}
               {subLinks && <Icon name="chevron-down" />}
             </a>
             {subLinks && (
-              <ul role="menu" className="menu">
+              <ul role="menu" className={`menu`}>
                 {subLinks.map(({ id, name, href }: any) => (
                   <li role="none" key={id}>
                     <a href={href} role="menuitem" className={activeClass}>

@@ -15,20 +15,21 @@
 
     .group {
       h2 {
-        margin-bottom: 1.3em;
+        margin-bottom: 2em;
         text-align: center;
       }
 
       .swiper {
-        max-width: 1123px;
+        max-width: 1196px;
       }
 
       .swiper-slide {
         background-color: var(--clr-dark-blue);
-        padding: 1em 0;
-        width: 250px;
+        padding: 1em 2em;
+        width: fit-content;
         display: grid;
         justify-items: center;
+
         gap: 1em;
         color: white;
         border-radius: 1em;
