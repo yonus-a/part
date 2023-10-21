@@ -12,3 +12,18 @@ model user {
   username String @unique(map: "username")
   password String
 }
+
+model home {
+  id            Int    @id
+  about         String @db.Text
+  aboutImage    String
+  services      String @db.Text
+  servicesImage String
+}
+
+model general_info {
+  id      Int    @id
+  address String
+  email   String
+  phone   String
+}

@@ -3,13 +3,14 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "@lib/prisma";
 
 const authOptions: AuthOptions = {
+  pages: {
+    signIn: "/auth/signin",
+    error: "/auth/signin",
+  },
   providers: [
     CredentialsProvider({
       name: "credentials",
-      credentials: {
-        username: { label: "نام کاربری", type: "text" },
-        password: { label: "رمز عبور", type: "password" },
-      },
+      credentials: {},
       async authorize(credentials: any, req) {
         const { username, password } = credentials;
 

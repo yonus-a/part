@@ -6,9 +6,7 @@ import Namads from "../namads";
 import MobileOnly from "../mobile-only";
 import PcOnly from "../pc-only";
 
-const data = {};
-
-export default function Footer() {
+export default function Footer({ data }: any) {
   return (
     <footer>
       <Container>
@@ -38,15 +36,12 @@ export default function Footer() {
             </PcOnly>
             <div className="group">
               <h4>آدرس</h4>
-              <p>
-                میدان شهید طهرانی مقدم ، سرو شرقی <br /> خیابان مجد ، کوچه نسترن
-                ، شماره ۳۴
-              </p>
+              <p>{data.address}</p>
             </div>
             <div className="group">
               <h4>ایمیل و تلفن</h4>
-              <p>info@partdp.ir</p>
-              <p className="tel">۰۲۱-۷۴۳۱۸۰۰۰</p>
+              <p>{data.email}</p>
+              <p className="tel">{data.phone}</p>
             </div>
           </address>
           <Namads />
@@ -60,8 +55,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-// <div className="group">
-//   <p>&copy; 1402</p>
-//   <p>مامی حقوق و محتوا برای شرکت پردازش</p>
-// </div>

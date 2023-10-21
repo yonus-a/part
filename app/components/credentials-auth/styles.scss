@@ -1,0 +1,12 @@
+.credentials-auth {
+  display: grid;
+  gap: 2em;
+
+  .submit {
+    background-color: var(--clr-dark-blue);
+    border-radius: 1em;
+    color: white;
+    padding: 1.3em;
+    margin-top: 1em;
+  }
+}
