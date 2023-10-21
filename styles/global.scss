@@ -7,8 +7,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-400.woff2") format("woff2"),
+  src: url("/fonts/iranyekan-400.woff2") format("woff2"),
     url("/fonts/iranyekan-400.woff");
   font-weight: 400;
   font-style: normal;
@@ -16,8 +15,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-500.woff2") format("woff2"),
+  src: url("/fonts/iranyekan-500.woff2") format("woff2"),
     url("/fonts/iranyekan-500.woff");
   font-weight: 500;
   font-style: normal;
@@ -25,8 +23,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-700.woff2") format("woff2"),
+  src: url("/fonts/iranyekan-700.woff2") format("woff2"),
     url("/fonts/iranyekan-700.woff");
   font-weight: 700;
   font-style: normal;
@@ -34,8 +31,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-700.woff2") format("woff2"),
+  src: url("/fonts/iranyekan-700.woff2") format("woff2"),
     url("/fonts/iranyekan-700.woff");
   font-weight: 700;
   font-style: normal;
@@ -43,8 +39,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/Roboto-Regular.woff2") format("woff2"),
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2"),
     url("/fonts/Roboto-Regular.woff");
   font-weight: 400;
   font-style: normal;
@@ -74,6 +69,10 @@ li {
 
 h2 {
   font-size: 1.7em;
+}
+
+svg {
+  fill: #555;
 }
 
 /* svg sprite */

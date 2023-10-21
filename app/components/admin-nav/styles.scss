@@ -1,0 +1,82 @@
+@use "@styles/mixins.scss" as *;
+
+.admin-nav {
+  @include size(400px, 100vh);
+  background-color: var(--clr-dark-blue);
+  position: fixed;
+  right: 0;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  .animation {
+    margin-bottom: 3em;
+    @include size(130px);
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  a {
+    @include flex-align-center;
+    @include icon-size(20px);
+    color: var(--clr-white);
+    border-radius: 1em;
+    padding: 1em;
+
+    svg {
+      fill: var(--clr-white);
+    }
+
+    &:hover {
+      background-color: #09182d;
+    }
+  }
+
+  .submenu {
+    display: none;
+    background-color: #09182d;
+
+    li:first-child {
+      a {
+        border-top-right-radius: 1em;
+        border-top-left-radius: 1em;
+      }
+    }
+
+    li:last-child {
+      a {
+        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+      }
+    }
+
+    a {
+      border-radius: 0;
+      color: white;
+
+      &:hover {
+        background-color: #040a13;
+      }
+    }
+  }
+
+  .show-submenu {
+    display: block !important;
+    border-radius: 1em;
+  }
+
+  .signout {
+    @include icon-size(45px);
+    @include flex-align-center;
+    margin-top: auto;
+    gap: 1em;
+    color: white;
+
+    svg {
+      fill: white;
+    }
+  }
+}

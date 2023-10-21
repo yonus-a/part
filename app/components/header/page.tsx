@@ -7,6 +7,7 @@ import Nav from "../nav/page";
 import "./styles.scss";
 import { useState, useEffect } from "react";
 import Icon from "../icon";
+import Link from "next/link";
 
 export default function Header() {
   const [classnames, setClassnames] = useState("");
@@ -30,10 +31,15 @@ export default function Header() {
       <Container>
         <div className="wrapper">
           <Nav />
-          <Button className="language">
-            <Icon name="language" title="language" />
-            {/* <Image src="/icons/en.png" alt="language" width={40} height={40} /> */}
-          </Button>
+          <div className="group">
+            <Link className="login" href="/admin">
+              ورود
+            </Link>
+            <Button className="language">
+              <Icon name="language" title="language" />
+              {/* <Image src="/icons/en.png" alt="language" width={40} height={40} /> */}
+            </Button>
+          </div>
         </div>
       </Container>
     </header>

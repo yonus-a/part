@@ -17,6 +17,9 @@ export default function SvgSprite() {
         <symbol viewBox="0 -960 960 960" id="arrow-left">
           <path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z" />
         </symbol>
+        <symbol viewBox="0 -960 960 960" id="signout">
+          <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
+        </symbol>
         <symbol viewBox="0 -960 960 960" id="menu">
           <path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
         </symbol>

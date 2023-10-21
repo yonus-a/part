@@ -10,10 +10,20 @@ header {
     @include flex-space-between;
     padding: 2.7em 0;
 
-    .language {
-      svg {
-        @include size(40px);
-        fill: white;
+    .group {
+      @include flex-align-center;
+      gap: 1.5em;
+
+      .login {
+        color: white;
+        font-size: 17px;
+      }
+
+      .language {
+        svg {
+          @include size(40px);
+          fill: white;
+        }
       }
     }
   }
@@ -29,12 +39,29 @@ header {
     }
   }
 
+  a {
+    color: black;
+
+    svg {
+      fill: black;
+    }
+  }
+
   .wrapper {
     padding: 1.5em 0;
 
-    .language {
-      svg {
-        fill: #555;
+    .group {
+      @include flex-align-center;
+      gap: 1.5em;
+
+      .login {
+        color: #555;
+      }
+
+      .language {
+        svg {
+          fill: #555;
+        }
       }
     }
   }
