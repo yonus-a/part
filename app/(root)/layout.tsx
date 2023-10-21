@@ -5,6 +5,10 @@ import Footer from "../components/footer";
 import "swiper/css";
 import prisma from "@lib/prisma";
 
+// import animate.css
+import "animate.css";
+import WOWINIT from "@app/components/WOWINIT";
+
 interface Props {
   children: React.ReactNode;
 }
@@ -23,6 +27,7 @@ export default async function MainLayout({ children }: Props) {
       <Header />
       {children}
       <Footer data={data} />
+      <WOWINIT />
     </>
   );
 }

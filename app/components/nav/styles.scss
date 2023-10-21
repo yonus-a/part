@@ -18,7 +18,11 @@
   .mobile-only {
     .menu-cta {
       @include icon-size(32px);
-      fill: var(--clr-white);
+      display: flex;
+
+      svg {
+        fill: var(--clr-white);
+      }
     }
 
     .close-menu {

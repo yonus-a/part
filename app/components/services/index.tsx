@@ -7,7 +7,13 @@ export default function Services({ text, image }: any) {
     <section className="services" aria-label="services">
       <Container>
         <div className="flex-wrapper">
-          <Image src={`/images/${image}`} alt="part" width={660} height={460} />
+          <Image
+            className="wow animate__animated animate__zoomInLeft"
+            src={`/images/${image}`}
+            alt="part"
+            width={660}
+            height={460}
+          />
           <div className="group">
             <h2>خدمات</h2>
             <p>{text}</p>

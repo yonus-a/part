@@ -2,7 +2,7 @@ import NextAuth, { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "@lib/prisma";
 
-const authOptions: AuthOptions = {
+export const authOptions: AuthOptions = {
   pages: {
     signIn: "/auth/signin",
     error: "/auth/signin",

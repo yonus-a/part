@@ -8,7 +8,13 @@ export default function BusinessDesc({ text, image }: any) {
     <section className="business-desc" aria-label="business description">
       <Container>
         <div className="flex-wrapper">
-          <Image src={`/images/${image}`} alt="part" width={630} height={460} />
+          <Image
+            className="wow animate__animated animate__zoomInRight"
+            src={`/images/${image}`}
+            alt="part"
+            width={630}
+            height={460}
+          />
           <div className="group">
             <p>{text}</p>
             <a href="#">

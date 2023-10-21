@@ -24,7 +24,7 @@ export default function CredentialsAuth({ setErrorMsg, callbackUrl }: Props) {
     const result = await signIn("credentials", { redirect: false, ...data });
 
     if (result?.ok) {
-      router.push(callbackUrl);
+      router.push("/admin");
     } else {
       setErrorMsg(result?.error);
     }

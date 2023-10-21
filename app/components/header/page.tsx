@@ -32,7 +32,7 @@ export default function Header() {
         <div className="wrapper">
           <Nav />
           <div className="group">
-            <Link className="login" href="/admin">
+            <Link className="login" href="auth/signin">
               ورود
             </Link>
             <Button className="language">

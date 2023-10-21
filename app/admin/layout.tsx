@@ -6,9 +6,9 @@ interface Props {
 
 export default function AdminLayout({ children }: Props) {
   return (
-    <>
+    <main style={{ marginRight: 400 }}>
       <AdminNav />
       {children}
-    </>
+    </main>
   );
 }

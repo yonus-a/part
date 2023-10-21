@@ -23,12 +23,12 @@ const links = [
       {
         id: 2,
         name: "معرفی شرکت",
-        href: "#",
+        href: "/admin/update-about",
       },
       {
         id: 3,
         name: "خدمات",
-        href: "#",
+        href: "/admin/update-services",
       },
       {
         id: 4,
@@ -38,7 +38,7 @@ const links = [
       {
         id: 5,
         name: "فوتر",
-        href: "#",
+        href: "/admin/update-footer",
       },
     ],
   },
@@ -74,10 +74,9 @@ export default function AdminNav() {
 
   const handleClick = (event: any) => {
     const { target } = event;
-    const menu = target.nextElementSibling;
+    const menu = target.closest("a").nextElementSibling;
 
     if (menu) {
-      event.preventDefault();
       menu.classList.toggle("show-submenu");
     }
   };

@@ -4,9 +4,8 @@
   padding: 4em 0;
 
   .flex-wrapper {
-    display: flex;
+    @include flex-gap(3em);
     flex-direction: column;
-    gap: 3em;
 
     > img {
       @include size(100%, 300px);
@@ -14,24 +13,20 @@
     }
 
     .group {
+      width: 100%;
+
       h2 {
         margin-bottom: 2em;
         text-align: center;
       }
 
-      .swiper {
-        max-width: 1196px;
-      }
-
       .swiper-slide {
+        @include grid-gap(1em);
         background-color: var(--clr-dark-blue);
         padding: 1em 2em;
         width: fit-content;
-        display: grid;
         justify-items: center;
-
-        gap: 1em;
-        color: white;
+        color: var(--clr-white);
         border-radius: 1em;
       }
     }

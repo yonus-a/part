@@ -32,7 +32,10 @@ export default function Products() {
       <Container>
         <div className="flex-wrapper">
           {data.map(({ id, logo, name, desc }: any) => (
-            <div key={id} className="card">
+            <div
+              key={id}
+              className="card wow animate__animated animate__zoomIn"
+            >
               <Image
                 src={`/images/logos/${logo}`}
                 alt="name"

@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+@mixin grid-items-center {
+  display: grid;
+  align-items: center;
+}
+
 @mixin take-all-space {
   z-index: 9999999999;
   position: fixed;

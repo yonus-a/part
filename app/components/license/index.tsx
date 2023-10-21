@@ -31,8 +31,12 @@ export default function License() {
       <Container>
         <h2>مجوز ها</h2>
         <ul>
-          {data.map(({ id, image, text }: any) => (
-            <li className="card" key={id}>
+          {data.map(({ id, image, text }: any, idx: number) => (
+            <li
+              className="card wow animate__animated animate__pulse"
+              data-wow-delay={`${idx * 200}ms`}
+              key={id}
+            >
               <Image
                 src={`/images/license/${image}`}
                 width={80}

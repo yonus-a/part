@@ -2,15 +2,15 @@
 
 .signin {
   @include flex-center;
-  height: 100vh;
   background-color: var(--clr-dark-blue);
+  height: 100vh;
 
   .wrapper {
     width: 430px;
     padding: 2em;
     background-color: white;
     border-radius: 1em;
-    box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.3);
+    box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.4);
   }
 
   .logo {
@@ -21,21 +21,12 @@
   .bg {
     position: fixed;
     top: 0;
-    right: -10%;
+    right: -100%;
     bottom: 0;
-    width: 60%;
+    width: 150%;
     background-color: var(--clr-dark-blue);
     z-index: -1;
     transform: skew(-20deg);
-  }
-
-  .animation {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   @include on-pc {

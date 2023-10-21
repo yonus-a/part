@@ -13,6 +13,7 @@
     img {
       @include size(100%, 300px);
       border-radius: 1em;
+      display: flex;
     }
 
     .group {

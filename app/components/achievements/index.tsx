@@ -1,11 +1,9 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 import Container from "../container";
+import Image from "next/image";
 import "./styles.scss";
-// Import Swiper styles
-import "swiper/css";
 
 const data = {
   image: "certifications-desc-image-min.jpg",
@@ -58,12 +56,6 @@ export default function Achievements() {
     <section className="achievements" aria-label="achievements">
       <Container>
         <div className="flex-wrapper">
-          {/* <Image
-            src={`/images/${data.image}`}
-            alt="part"
-            width={630}
-            height={460}
-          /> */}
           <div className="group">
             <h2>مجوزها، افتخارات</h2>
             <Swiper spaceBetween={15} slidesPerView={"auto"} className="swiper">
