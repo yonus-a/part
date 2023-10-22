@@ -1,0 +1,47 @@
+.en-hero {
+  height: 100vh;
+  background-image: url("/images/bg-en-hero.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
+  padding-top: 7em;
+
+  .container {
+    width: 100%;
+    display: grid;
+    align-items: top;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    h1 {
+      margin-bottom: 2em;
+    }
+
+    .animation {
+      width: 500px;
+      height: 500px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        display: grid;
+        justify-items: center;
+        gap: 1em;
+
+        svg {
+          width: 35px;
+          height: 29px;
+          fill: white;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

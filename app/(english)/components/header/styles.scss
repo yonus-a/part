@@ -1,0 +1,23 @@
+.en-header {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  width: 100%;
+}
+
+.white-bg {
+  background-color: white;
+  box-shadow: 0 5px 10px 0 rgba($color: #000000, $alpha: 0.3);
+
+  .logo {
+    color: #555;
+
+    svg {
+      fill: #555 !important;
+    }
+  }
+
+  a {
+    color: #555 !important;
+  }
+}

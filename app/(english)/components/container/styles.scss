@@ -1,0 +1,14 @@
+@use "@styles/mixins.scss" as *;
+
+.container {
+  @include m-p(0 auto, 0 20px);
+  width: 100%;
+
+  @media (min-width: 1340px) {
+    max-width: 1340px;
+  }
+
+  @include on-pc {
+    padding: 0 70px;
+  }
+}

@@ -1,0 +1,29 @@
+.about {
+  height: 100vh;
+  background-image: url("/images/bg-section3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
+  margin-top: 4em;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100%;
+    color: white;
+
+    .group {
+      display: grid;
+      gap: 2.5em;
+
+      h2 {
+        font-size: 38px;
+      }
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
