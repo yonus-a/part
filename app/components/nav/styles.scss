@@ -7,7 +7,6 @@
     @include flex-align-center;
     padding: 1em;
     gap: 0.5em;
-    // test
     color: white;
 
     svg {
@@ -48,13 +47,17 @@
       height: 100vh;
 
       .menu {
-        display: none;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.26s ease;
+        height: 0;
       }
 
       .show-menu {
-        display: block !important;
-        background-color: #ddd;
+        transform: scaleY(1);
+        height: 100%;
         border-radius: 1em;
+        background-color: #ddd;
 
         li:first-child {
           a {
@@ -88,17 +91,20 @@
         }
 
         .menu {
-          display: block;
+          opacity: 1;
+          visibility: visible;
         }
       }
 
       .menu {
-        display: none;
         position: absolute;
         box-shadow: 2px 5px 10px 0 rgba($color: #000000, $alpha: 0.2);
         background-color: white;
         border-radius: 1em;
         padding: 1em;
+        transition: all 300ms ease-in-out;
+        opacity: 0;
+        visibility: hidden;
 
         a {
           width: 100%;

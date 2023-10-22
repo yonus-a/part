@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./styles.scss";
+import Link from "next/link";
 
 const data = {
   bagImg: "hero-bag.jpg",
@@ -16,13 +17,14 @@ export default function Hero() {
         <h1>پردازش اطلاعات مالی پارت</h1>
         <p>دستیار هوشمند اقتصادی شما</p>
       </div>
-      <Image
-        src="/icons/scroll-down.png"
-        alt="scroll down"
-        className="scroll-down"
-        width={43}
-        height={100}
-      />
+      <Link href="#content" className="scroll-down">
+        <Image
+          src="/icons/scroll-down.png"
+          alt="scroll down"
+          width={43}
+          height={100}
+        />
+      </Link>
     </section>
   );
 }

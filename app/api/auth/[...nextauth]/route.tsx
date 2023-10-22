@@ -1,11 +1,11 @@
 import NextAuth, { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import bcrypt from "bcrypt";
 import prisma from "@lib/prisma";
 
 export const authOptions: AuthOptions = {
   pages: {
     signIn: "/auth/signin",
-    error: "/auth/signin",
   },
   providers: [
     CredentialsProvider({
@@ -25,7 +25,9 @@ export const authOptions: AuthOptions = {
         });
 
         if (maybeUser) {
-          if (password === maybeUser.password) {
+          const match = await bcrypt.compare(password, maybeUser.password);
+
+          if (match) {
             return maybeUser;
           }
         }

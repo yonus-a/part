@@ -9,9 +9,9 @@ export default function BusinessDesc({ text, image }: any) {
       <Container>
         <div className="flex-wrapper">
           <Image
-            className="wow animate__animated animate__zoomInRight"
             src={`/images/${image}`}
             alt="part"
+            className="wow"
             width={630}
             height={460}
           />

@@ -47,7 +47,7 @@ export default function CredentialsAuth({ setErrorMsg, callbackUrl }: Props) {
         type="password"
       />
       <Button className="submit" type="submit">
-        ثبت نام
+        ورود
       </Button>
     </form>
   );

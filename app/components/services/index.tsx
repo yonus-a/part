@@ -8,7 +8,7 @@ export default function Services({ text, image }: any) {
       <Container>
         <div className="flex-wrapper">
           <Image
-            className="wow animate__animated animate__zoomInLeft"
+            className="wow"
             src={`/images/${image}`}
             alt="part"
             width={660}

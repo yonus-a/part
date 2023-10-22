@@ -29,6 +29,18 @@
     transform: skew(-20deg);
   }
 
+  .animation {
+    @include size(600px);
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: 1870px) {
+      display: none;
+    }
+  }
+
   @include on-pc {
     background-color: transparent;
   }

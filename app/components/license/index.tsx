@@ -27,7 +27,7 @@ const data = [
 
 export default function License() {
   return (
-    <section className="license" aria-label="license">
+    <section id="content" className="license" aria-label="license">
       <Container>
         <h2>مجوز ها</h2>
         <ul>

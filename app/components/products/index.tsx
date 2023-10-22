@@ -1,6 +1,5 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import "./styles.scss";
 import Container from "../container";
@@ -31,10 +30,11 @@ export default function Products() {
     <section className="products" aria-label="products">
       <Container>
         <div className="flex-wrapper">
-          {data.map(({ id, logo, name, desc }: any) => (
+          {data.map(({ id, logo, name, desc }: any, idx: number) => (
             <div
               key={id}
-              className="card wow animate__animated animate__zoomIn"
+              className="card wow animate__animated animate__pulse"
+              data-wow-delay={`${idx * 300}ms`}
             >
               <Image
                 src={`/images/logos/${logo}`}

@@ -7,9 +7,16 @@
 }
 
 @font-face {
+  font-family: "IranSans";
+  src: url("/fonts/IRANSans_Medium.woff2") format("woff2"),
+    url("/fonts/IRANSans_Medium.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-400.woff2") format("woff2"),
+  src: url("/fonts/iranyekan-400.woff2") format("woff2"),
     url("/fonts/iranyekan-400.woff");
   font-weight: 400;
   font-style: normal;
@@ -17,8 +24,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-500.woff2") format("woff2"),
+  src: url("/fonts/iranyekan-500.woff2") format("woff2"),
     url("/fonts/iranyekan-500.woff");
   font-weight: 500;
   font-style: normal;
@@ -26,8 +32,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-700.woff2") format("woff2"),
+  src: url("/fonts/iranyekan-700.woff2") format("woff2"),
     url("/fonts/iranyekan-700.woff");
   font-weight: 700;
   font-style: normal;
@@ -35,17 +40,7 @@
 
 @font-face {
   font-family: "myFont";
-  src:
-    url("/fonts/iranyekan-700.woff2") format("woff2"),
-    url("/fonts/iranyekan-700.woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "myFont";
-  src:
-    url("/fonts/Roboto-Regular.woff2") format("woff2"),
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2"),
     url("/fonts/Roboto-Regular.woff");
   font-weight: 400;
   font-style: normal;
@@ -57,6 +52,10 @@
   font-weight: 400;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -73,6 +72,15 @@ li {
   display: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IranSans";
+}
+
 h2 {
   font-size: 1.7em;
 }
@@ -84,4 +92,17 @@ svg {
 /* svg sprite */
 .svg-sprite {
   display: none;
+}
+
+// animations
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

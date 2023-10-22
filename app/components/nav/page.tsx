@@ -7,31 +7,42 @@ import { useState } from "react";
 import Button from "../button";
 import Icon from "../icon";
 import "./styles.scss";
+import Dialog from "../dialog";
+import DialogCta from "../dialog-cta";
+import DialogLayer from "../dialog-layer";
+import DialogContainer from "../dialog-container";
 
 export default function Nav() {
-  const [show, setShow] = useState(false);
-
   const handleClick = (event: any) => {
     event.preventDefault();
     const { target } = event;
-    const menu = target.nextElementSibling;
+    const menu = target.closest("a").nextElementSibling;
     menu.classList.toggle("show-menu");
+  };
+
+  const variants = {
+    initial: { x: 100 },
+    animate: { x: 0 },
   };
 
   return (
     <nav aria-label="Main Navigation" className="main-nav">
       <MobileOnly>
-        <Button className="menu-cta" onClick={() => setShow(true)}>
-          <Icon name="menu" />
-        </Button>
-        {show && (
-          <div className="menu-wrapper">
-            <Button className="close-menu" onClick={() => setShow(false)}>
-              <Icon name="close" />
-            </Button>
-            <NavLinks onGeneralLinkClick={handleClick} />
-          </div>
-        )}
+        <Dialog ariaLabel="Main Navigation">
+          <DialogCta className="menu-cta">
+            <Icon name="menu" />
+          </DialogCta>
+          <DialogLayer>
+            <DialogContainer variants={variants} takeAllSpace kickOff>
+              <div className="menu-wrapper">
+                <DialogCta className="close-menu">
+                  <Icon name="close" />
+                </DialogCta>
+                <NavLinks onGeneralLinkClick={handleClick} />
+              </div>
+            </DialogContainer>
+          </DialogLayer>
+        </Dialog>
       </MobileOnly>
       <PcOnly>
         <NavLinks />

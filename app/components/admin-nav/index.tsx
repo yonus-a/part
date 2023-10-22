@@ -17,26 +17,16 @@ const links = [
     subLinks: [
       {
         id: 1,
-        name: "منوی اصلی",
-        href: "#",
-      },
-      {
-        id: 2,
         name: "معرفی شرکت",
         href: "/admin/update-about",
       },
       {
-        id: 3,
+        id: 2,
         name: "خدمات",
         href: "/admin/update-services",
       },
       {
-        id: 4,
-        name: "مجور ها و افتخارات",
-        href: "#",
-      },
-      {
-        id: 5,
+        id: 3,
         name: "فوتر",
         href: "/admin/update-footer",
       },
@@ -109,10 +99,16 @@ export default function AdminNav() {
           );
         })}
       </ul>
-      <Button className="signout" onClick={() => signOut({ callbackUrl: "/" })}>
-        <Icon name="signout" />
-        خروج
-      </Button>
+      <div className="exit-btns">
+        <Button onClick={() => signOut({ callbackUrl: "/" })}>
+          <Icon name="signout" />
+          خروج
+        </Button>
+        <Link href="/">
+          <Icon name="signout" />
+          بازگشت به صفحه اصلی
+        </Link>
+      </div>
     </nav>
   );
 }

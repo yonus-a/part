@@ -37,7 +37,10 @@
   }
 
   .submenu {
-    display: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+    height: 0;
     background-color: #09182d;
 
     li:first-child {
@@ -65,16 +68,24 @@
   }
 
   .show-submenu {
-    display: block !important;
+    transform: scaleY(1);
+    height: 100%;
     border-radius: 1em;
   }
 
-  .signout {
-    @include icon-size(45px);
-    @include flex-align-center;
+  .exit-btns {
+    @include icon-size(40px);
+    display: grid;
     margin-top: auto;
     gap: 1em;
-    color: white;
+
+    button,
+    a {
+      color: white;
+      @include flex-align-center;
+      padding: 0;
+      gap: 1em;
+    }
 
     svg {
       fill: white;
