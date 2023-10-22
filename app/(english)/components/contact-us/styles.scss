@@ -1,0 +1,22 @@
+.contact-us {
+  margin-top: 4em;
+
+  h2 {
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  form {
+    display: grid;
+    gap: 3em;
+
+    .submit {
+      justify-self: start;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #555;
+      padding: 0 1em;
+    }
+  }
+}

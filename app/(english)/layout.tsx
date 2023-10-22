@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SvgSprite from "../(persian)/components/svg-sprite";
 import Header from "./components/header";
 import "@styles/global.scss";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Props) {
       <body>
         <Header />
         {children}
+        <Footer />
         <SvgSprite />
       </body>
     </html>

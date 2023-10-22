@@ -1,4 +1,4 @@
-import Auth from "@app/components/auth";
+import Auth from "../../components/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@app/(persian)/api/auth/[...nextauth]/route";

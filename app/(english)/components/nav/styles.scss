@@ -9,23 +9,20 @@
     justify-content: space-between;
     align-items: center;
 
-    .col-write {
-      display: flex;
-      gap: 5em;
-      align-items: center;
+    .menu-cta {
+      @include size(30px);
+      @include flex-align-center;
+
+      svg {
+        fill: white;
+      }
     }
 
-    .logo {
-      @include flex-align-center;
-      @include icon-size(50px);
-
-      .brand {
-        font-size: 22px;
-      }
-
-      .slogan {
-        font-size: 10px;
-      }
+    .col-right {
+      display: none;
+      // display: flex;
+      gap: 5em;
+      align-items: center;
     }
 
     ul {
@@ -40,6 +37,16 @@
         &:hover {
           border-bottom: 1px solid var(--clr-white);
         }
+      }
+    }
+
+    @include on-pc {
+      .menu-cta {
+        display: none;
+      }
+
+      .col-right {
+        display: flex;
       }
     }
   }

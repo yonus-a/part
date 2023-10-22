@@ -1,0 +1,14 @@
+@use "styles/mixins.scss" as *;
+
+.en-logo-transparent {
+  @include flex-align-center;
+  @include icon-size(50px);
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .slogan {
+    font-size: 10px;
+  }
+}

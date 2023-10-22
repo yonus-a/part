@@ -3,6 +3,8 @@ import Container from "../container";
 import Icon from "@app/(persian)/components/icon";
 import Image from "next/image";
 import "./styles.scss";
+import Logo from "../logo";
+import Button from "@app/(persian)/components/button";
 
 const links = [
   {
@@ -31,14 +33,18 @@ export default function Nav() {
   return (
     <nav className="en-nav" aria-label="Main Navigation">
       <Container>
-        <div className="logo">
-          <Icon name="logo" />
-          <div className="group">
-            <p className="brand">Part</p>
-            <p className="slogan">Financial Data Processing Company</p>
-          </div>
-        </div>
-        <div className="col-write">
+        <Logo />
+        <Image
+          src="/images/logo-footer-white.png"
+          alt=""
+          width={210}
+          height={50}
+          className="en-logo-white"
+        />
+        <Button className="menu-cta">
+          <Icon name="menu" />
+        </Button>
+        <div className="col-right">
           <ul role="menubar">
             {links.map(({ id, name, href }: any) => (
               <li key={id} role="none">

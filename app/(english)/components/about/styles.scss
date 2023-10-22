@@ -1,29 +1,66 @@
+@use "styles/mixins.scss" as *;
+
 .about {
   height: 100vh;
   background-image: url("/images/bg-section3.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   background-position: bottom;
+  background-size: 100% 100%;
   margin-top: 4em;
 
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
     height: 100%;
     color: white;
 
     .group {
       display: grid;
-      gap: 2.5em;
+      gap: 1.5em;
 
       h2 {
-        font-size: 38px;
+        font-size: 28px;
+      }
+
+      p {
+        text-align: justify;
       }
     }
 
     a {
       color: white;
+    }
+
+    .animation-wrapper {
+      display: flex;
+      justify-content: center;
+
+      .animation {
+        width: 350px;
+        height: 350px;
+      }
+    }
+
+    @include on-pc {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+
+      .group {
+        gap: 2.5em;
+
+        h2 {
+          font-size: 38px;
+        }
+      }
+
+      .animation-wrapper {
+        .animation {
+          width: 500px;
+          height: 500px;
+        }
+      }
     }
   }
 }

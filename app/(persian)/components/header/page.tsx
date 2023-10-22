@@ -35,10 +35,9 @@ export default function Header() {
             <Link className="login" href="/auth/signin">
               ورود
             </Link>
-            <Button className="language">
+            <Link href="/en" className="language">
               <Icon name="language" title="language" />
-              {/* <Image src="/icons/en.png" alt="language" width={40} height={40} /> */}
-            </Button>
+            </Link>
           </div>
         </div>
       </Container>

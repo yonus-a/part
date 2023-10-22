@@ -1,0 +1,83 @@
+@use "@styles/mixins.scss" as *;
+
+.en-footer {
+  background-color: #192a56;
+  padding: 3em 0;
+  margin-top: 5em;
+  color: white;
+  font-size: 14px;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4em;
+
+    .col {
+      display: grid;
+      align-content: start;
+      gap: 1.5em;
+
+      .icon-wrapper {
+        display: flex;
+        gap: 0.5em;
+
+        svg {
+          flex-shrink: 0;
+        }
+      }
+
+      .subscribe {
+        display: grid;
+        gap: 1.5em;
+
+        input {
+          padding: 0.9em;
+          border-radius: 10px;
+          background-color: #67728f;
+          font-size: 15px;
+          color: white;
+        }
+
+        ::placeholder {
+          color: white;
+          opacity: 1; /* Firefox */
+        }
+
+        ::-ms-input-placeholder {
+          /* Edge 12 -18 */
+          color: white;
+        }
+
+        p {
+          line-height: 2.14;
+        }
+
+        button {
+          border-radius: 10px;
+          font-size: 15px;
+          background-color: #1561cb;
+          justify-self: start;
+          padding: 0.9em 2em;
+          color: white;
+        }
+      }
+
+      &:first-child {
+        > p {
+          line-height: 2.14;
+        }
+      }
+
+      address {
+        display: grid;
+        line-height: 2.14;
+        gap: 2em;
+
+        svg {
+          @include size(26px);
+          fill: white;
+        }
+      }
+    }
+  }
+}

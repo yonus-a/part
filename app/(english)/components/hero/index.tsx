@@ -9,18 +9,18 @@ import Icon from "@app/(persian)/components/icon";
 const list = [
   {
     id: 1,
-    logo: "tating",
+    logo: "credit",
     text: "Credit Scoring & Rating",
-  },
-  {
-    id: 2,
-    logo: "it",
-    text: "IT & Artificial Intelligence",
   },
   {
     id: 3,
     logo: "market",
     text: "Capital Market",
+  },
+  {
+    id: 2,
+    logo: "ai",
+    text: "IT & Artificial Intelligence",
   },
 ];
 

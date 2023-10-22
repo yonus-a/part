@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Container from "../container";
+import Lottie from "lottie-react";
+import CompanyAnimation from "@public/animation/company.json";
 import "./styles.scss";
 
 export default function About() {
@@ -19,7 +23,9 @@ export default function About() {
           </p>
           <Link href="#">Read More</Link>
         </div>
-        <div></div>
+        <div className="animation-wrapper">
+          <Lottie className="animation" animationData={CompanyAnimation} loop={true} />
+        </div>
       </Container>
     </section>
   );

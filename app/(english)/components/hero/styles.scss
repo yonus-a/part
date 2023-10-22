@@ -1,3 +1,5 @@
+@use "styles/mixins.scss" as *;
+
 .en-hero {
   height: 100vh;
   background-image: url("/images/bg-en-hero.png");
@@ -15,17 +17,17 @@
     color: white;
 
     h1 {
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
 
     .animation {
-      width: 500px;
-      height: 500px;
+      @include size(350px);
     }
 
     ul {
       display: flex;
       justify-content: space-between;
+      margin-top: 3.5em;
 
       li {
         display: grid;
@@ -40,6 +42,25 @@
 
         p {
           font-size: 14px;
+        }
+
+        &:nth-child(2) {
+          position: relative;
+          top: -60px;
+        }
+      }
+    }
+
+    @include on-pc {
+      .animation {
+        @include size(500px);
+      }
+
+      ul {
+        margin-top: 1em;
+
+        li {
+          position: static !important;
         }
       }
     }
