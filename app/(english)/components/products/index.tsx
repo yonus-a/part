@@ -63,10 +63,10 @@ export default function Products() {
   return (
     <section className="product-services" aria-label="products and services">
       <Container>
-        <h2>Products & Services</h2>
+        <h2 className="wow fadeUp">Products & Services</h2>
         <ul>
-          {data.map(({ id, icon, text, subText }: any) => (
-            <li key={id}>
+          {data.map(({ id, icon, text, subText }: any, idx: number) => (
+            <li key={id} className="wow fadeUp">
               <Image
                 src={`/images/logos/${icon}`}
                 width={69}

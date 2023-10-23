@@ -1,8 +1,8 @@
 "use client";
 
-import Alert from "@app/components/alert";
-import LabledTextarea from "@app/components/labeld-textarea";
-import PrimaryBtn from "@app/components/primary-btn";
+import Alert from "../../components/alert";
+import LabledTextarea from "../../components/labeld-textarea";
+import PrimaryBtn from "../../components/primary-btn";
 import updateAboutAction from "@server-action/updateAboutAction";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

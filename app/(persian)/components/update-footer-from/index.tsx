@@ -1,7 +1,7 @@
 "use client";
 
-import PrimaryBtn from "@app/components/primary-btn";
-import Alert from "@app/components/alert";
+import PrimaryBtn from "../../components/primary-btn";
+import Alert from "../../components/alert";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import "./style.scss";

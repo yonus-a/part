@@ -13,7 +13,6 @@
     img {
       @include size(100%, 300px);
       border-radius: 1em;
-      animation: slide-down 1.4s ease-in-out;
     }
 
     .group {

@@ -1,8 +1,11 @@
 @use "@styles/mixins.scss" as *;
 
 .admin-nav {
-  @include size(400px, 100vh);
-  background-color: var(--clr-dark-blue);
+  @include size(360px, 100vh);
+  background-image: url("/images/bg-mobilemenu.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: fixed;
   right: 0;
   padding: 2em;
@@ -12,7 +15,7 @@
 
   .animation {
     margin-bottom: 3em;
-    @include size(130px);
+    @include size(110px);
   }
 
   ul {
@@ -32,7 +35,7 @@
     }
 
     &:hover {
-      background-color: #09182d;
+      background-color: #055bbd;
     }
   }
 
@@ -41,7 +44,7 @@
     transform-origin: top;
     transition: transform 0.26s ease;
     height: 0;
-    background-color: #09182d;
+    background-color: var(--clr-primary);
 
     li:first-child {
       a {
@@ -62,7 +65,7 @@
       color: white;
 
       &:hover {
-        background-color: #040a13;
+        background-color: #055bbd;
       }
     }
   }
@@ -74,10 +77,10 @@
   }
 
   .exit-btns {
-    @include icon-size(40px);
+    @include icon-size(30px);
     display: grid;
     margin-top: auto;
-    gap: 1em;
+    gap: 1.3em;
 
     button,
     a {
@@ -85,6 +88,11 @@
       @include flex-align-center;
       padding: 0;
       gap: 1em;
+      font-size: 15px;
+
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     svg {

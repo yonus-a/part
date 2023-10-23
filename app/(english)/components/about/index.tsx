@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section className="about" aria-label="About company">
       <Container>
-        <div className="group">
+        <div className="group wow fadeUp">
           <h2>About company</h2>
           <p>
             Part Financial Data Processing is both a knowledge-based and private
@@ -24,7 +24,11 @@ export default function About() {
           <Link href="#">Read More</Link>
         </div>
         <div className="animation-wrapper">
-          <Lottie className="animation" animationData={CompanyAnimation} loop={true} />
+          <Lottie
+            className="animation wow fadeUp"
+            animationData={CompanyAnimation}
+            loop={true}
+          />
         </div>
       </Container>
     </section>

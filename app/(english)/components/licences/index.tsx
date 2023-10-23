@@ -1,6 +1,6 @@
+import Container from "../container";
 import Image from "next/image";
 import "./styles.scss";
-import Container from "../container";
 
 const data = [
   {
@@ -25,10 +25,10 @@ export default function Licences() {
   return (
     <section aria-label="licences" className="licences">
       <Container>
-        <h2>Our Licences</h2>
+        <h2 className="wow fadeUp">Our Licences</h2>
         <ul>
-          {data.map(({ id, icon, text }: any) => (
-            <li key={id}>
+          {data.map(({ id, icon, text }: any, idx: number) => (
+            <li key={id} className="wow fadeUp">
               <Image
                 src={`/images/logos/${icon}`}
                 alt={text}

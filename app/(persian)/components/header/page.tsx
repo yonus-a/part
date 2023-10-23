@@ -1,12 +1,10 @@
 "use client";
 
 import Container from "../container";
-import Button from "../button";
 import Image from "next/image";
 import Nav from "../nav/page";
 import "./styles.scss";
 import { useState, useEffect } from "react";
-import Icon from "../icon";
 import Link from "next/link";
 
 export default function Header() {
@@ -36,7 +34,7 @@ export default function Header() {
               ورود
             </Link>
             <Link href="/en" className="language">
-              <Icon name="language" title="language" />
+              <Image src="/images/en.png" alt="" width={30} height={25} />
             </Link>
           </div>
         </div>

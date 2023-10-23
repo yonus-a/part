@@ -3,8 +3,15 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url("/images/admin-bag.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  .animation {
+    width: 600px;
+    height: 600px;
+  }
+
+  .copywrite {
+    position: absolute;
+    font-size: 14px;
+    bottom: 25px;
+  }
 }

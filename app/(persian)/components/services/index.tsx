@@ -8,13 +8,13 @@ export default function Services({ text, image }: any) {
       <Container>
         <div className="flex-wrapper">
           <Image
-            className="wow"
+            className="wow fadeUp"
             src={`/images/${image}`}
             alt="part"
             width={660}
             height={460}
           />
-          <div className="group">
+          <div className="group wow fadeUp">
             <h2>خدمات</h2>
             <p>{text}</p>
           </div>

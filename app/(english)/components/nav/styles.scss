@@ -17,12 +17,68 @@
         fill: white;
       }
     }
+  }
 
+  .mobile-only {
+    .close-menu {
+      position: absolute;
+      z-index: 9999;
+      top: 35px;
+      right: 54px;
+
+      svg {
+        @include size(30px);
+        fill: white;
+      }
+    }
+
+    .dialog-container {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      right: 0;
+      top: 0;
+    }
+
+    .mobile-nav {
+      padding: 2em;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-image: url("/images/bg-mobilemenu.png");
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+
+      .row {
+        border-left: 1px solid #ccc;
+        padding-left: 1em;
+
+        h2 {
+          font-size: 22px;
+          margin-bottom: 0.5em;
+        }
+
+        ul {
+          display: grid;
+          gap: 0.6em;
+
+          a,
+          li {
+            color: white !important;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .pc-only {
     .col-right {
-      display: none;
-      // display: flex;
-      gap: 5em;
+      display: flex;
       align-items: center;
+      gap: 5em;
     }
 
     ul {
@@ -39,15 +95,20 @@
         }
       }
     }
+  }
+}
 
-    @include on-pc {
-      .menu-cta {
-        display: none;
-      }
+@keyframes bubble {
+  from {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    opacity: 0;
+  }
 
-      .col-right {
-        display: flex;
-      }
-    }
+  to {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
   }
 }

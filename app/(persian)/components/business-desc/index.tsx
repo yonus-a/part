@@ -11,11 +11,11 @@ export default function BusinessDesc({ text, image }: any) {
           <Image
             src={`/images/${image}`}
             alt="part"
-            className="wow"
+            className="wow fadeUp"
             width={630}
             height={460}
           />
-          <div className="group">
+          <div className="group wow fadeUp">
             <p>{text}</p>
             <a href="#">
               ادامه

@@ -30,13 +30,13 @@
   }
 
   .animation {
-    @include size(600px);
+    @include size(530px);
     position: absolute;
     left: 5%;
     top: 50%;
     transform: translateY(-50%);
 
-    @media (max-width: 1870px) {
+    @media (max-width: 1730px) {
       display: none;
     }
   }

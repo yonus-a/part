@@ -14,8 +14,8 @@ export default function Hero() {
       style={{ backgroundImage: `url(/images/${data.bagImg})` }}
     >
       <div className="center">
-        <h1>پردازش اطلاعات مالی پارت</h1>
-        <p>دستیار هوشمند اقتصادی شما</p>
+        <h1 className="wow fadeUp">پردازش اطلاعات مالی پارت</h1>
+        <p className="wow fadeUp">دستیار هوشمند اقتصادی شما</p>
       </div>
       <Link href="#content" className="scroll-down">
         <Image

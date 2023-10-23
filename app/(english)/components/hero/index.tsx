@@ -28,13 +28,15 @@ export default function Hero() {
   return (
     <section aria-label="hero" className="en-hero">
       <Container>
-        <h1>Part Financial Data Processing</h1>
+        <h1 className="wow fadeUp" data-wow-duration="1.2s">
+          Part Financial Data Processing
+        </h1>
         <Lottie
-          className="animation"
+          className="animation wow fadeUp"
           animationData={DataProcessingAnimaiton}
           loop={true}
         />
-        <ul>
+        <ul className="wow fadeUp">
           {list.map(({ id, logo, text }: any) => (
             <li key={id}>
               <Icon name={logo} />

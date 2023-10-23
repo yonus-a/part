@@ -11,6 +11,8 @@ interface Props {
   variants?: { initial: {}; animate: {}; exit?: {} };
   takeAllSpace?: boolean;
   kickOff?: boolean;
+  transition?: any;
+  style?: any;
 }
 
 export default function DialogContainer({
@@ -18,6 +20,8 @@ export default function DialogContainer({
   variants,
   takeAllSpace,
   kickOff,
+  transition = {},
+  style = {},
 }: Props) {
   const { isOpen, ariaLabel } = useContext<any>(DialogContext);
 
@@ -37,7 +41,7 @@ export default function DialogContainer({
           initial="initial"
           animate="animate"
           exit={variants?.exit ? "exit" : "initial"}
-          transition={kickOff ? { ease: "easeInOut" } : {}}
+          transition={kickOff ? { ease: "easeInOut" } : transition}
         >
           {children}
         </motion.div>

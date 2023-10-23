@@ -20,6 +20,8 @@ header {
       }
 
       .language {
+        display: flex;
+
         svg {
           @include size(40px);
           fill: white;
